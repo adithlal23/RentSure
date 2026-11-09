@@ -1,0 +1,1369 @@
+
+.dashboard-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f8f5;
+  color: #1c2b22;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #e9ece7;
+  padding: 27px 17px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 20;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  letter-spacing: -1.3px;
+  font-weight: 800;
+  color: #1c2b22;
+  padding: 0 8px;
+}
+
+.dashboard-brand > span:last-child span {
+  color: #438465;
+}
+
+.dashboard-brand-icon {
+  width: 37px;
+  height: 37px;
+  background: #174c38;
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.sidebar-label {
+  color: #9aa49b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  margin: 48px 10px 16px;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 6px;
+}
+
+.sidebar-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  border-radius: 7px;
+  color: #77827a;
+  font-size: 11px;
+  font-weight: 500;
+  transition: .2s;
+}
+
+.sidebar-link:hover {
+  background: #f4f7f2;
+  color: #174c38;
+}
+
+.sidebar-link.active {
+  background: #eaf2e9;
+  color: #174c38;
+  font-weight: 700;
+}
+
+.sidebar-count {
+  margin-left: auto;
+  background: #f5e9d8;
+  color: #9a6934;
+  font-size: 9px;
+  padding: 3px 7px;
+  border-radius: 10px;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-bottom .sidebar-label {
+  margin-top: 20px;
+}
+
+.sidebar-profile {
+  margin-top: 22px;
+  border-top: 1px solid #edf0eb;
+  padding: 20px 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #e6eee4;
+  color: #326749;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.profile-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.profile-info strong {
+  display: block;
+  font-size: 10px;
+  color: #35463a;
+}
+
+.profile-info span {
+  display: block;
+  color: #99a19a;
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.sidebar-profile > svg {
+  color: #89948b;
+}
+
+/* MAIN AREA */
+
+.dashboard-main {
+  margin-left: 250px;
+  min-width: 0;
+  flex: 1;
+}
+
+.dashboard-header {
+  height: 72px;
+  padding: 0 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e9ece7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #9aa39b;
+  font-size: 10px;
+}
+
+.dashboard-breadcrumb strong {
+  color: #3b4d40;
+  font-weight: 600;
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.dashboard-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 220px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #edf0eb;
+  border-radius: 6px;
+  color: #89958b;
+}
+
+.dashboard-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  font-size: 10px;
+  background: transparent;
+}
+
+.dashboard-search span {
+  color: #a1aaa2;
+  font-size: 9px;
+}
+
+.notification-button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border: 1px solid #edf0eb;
+  color: #66766b;
+  border-radius: 7px;
+  position: relative;
+}
+
+.notification-button i {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  background: #d78a53;
+  border-radius: 50%;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.dashboard-menu {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #174c38;
+}
+
+.dashboard-content {
+  max-width: 1500px;
+  margin: auto;
+  padding: 36px 38px 22px;
+}
+
+.welcome-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 29px;
+}
+
+.dashboard-eyebrow {
+  font-size: 9px;
+  color: #8a968c;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.welcome-row h1 {
+  font-size: 26px;
+  letter-spacing: -1.2px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.welcome-row h1 span {
+  font-size: 21px;
+}
+
+.welcome-row p {
+  color: #859087;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.dashboard-primary-button {
+  background: #174c38;
+  color: white;
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.dashboard-primary-button:hover {
+  background: #103b2c;
+  transform: translateY(-2px);
+}
+
+/* METRIC CARDS */
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 21px;
+}
+
+.metric-card {
+  background: white;
+  border: 1px solid #e9ede7;
+  border-radius: 9px;
+  padding: 20px;
+  min-width: 0;
+  transition: .2s;
+}
+
+.metric-card:hover {
+  box-shadow: 0 8px 24px rgba(32, 60, 39, .05);
+  transform: translateY(-2px);
+}
+
+.metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.metric-top > span {
+  color: #7f8b81;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.metric-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.metric-icon.green {
+  color: #3c8058;
+  background: #eaf3e9;
+}
+
+.metric-icon.purple {
+  color: #7d69a5;
+  background: #f0ebf7;
+}
+
+.metric-icon.orange {
+  color: #bd8250;
+  background: #faf0e5;
+}
+
+.metric-icon.blue {
+  color: #5885a4;
+  background: #eaf1f6;
+}
+
+.metric-value {
+  display: block;
+  font-size: 24px;
+  letter-spacing: -.9px;
+  margin-top: 19px;
+}
+
+.metric-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: #98a198;
+  font-size: 9px;
+  margin-top: 9px;
+}
+
+.metric-trend {
+  color: #3e895b;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 700;
+}
+
+/* PANELS */
+
+.dashboard-content-grid,
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 17px;
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+
+.dashboard-panel {
+  background: white;
+  border: 1px solid #e9ede7;
+  border-radius: 9px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.panel-heading h2 {
+  color: #27372c;
+  font-size: 15px;
+  letter-spacing: -.4px;
+  margin-top: 7px;
+}
+
+.lease-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #47805b;
+  background: #eef5ee;
+  border-radius: 20px;
+  padding: 7px 9px;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lease-active i {
+  width: 6px;
+  height: 6px;
+  background: #4a9767;
+  border-radius: 50%;
+}
+
+.property-visual {
+  height: 155px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+.property-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  background: rgba(255,255,255,.94);
+  color: #385a43;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #87938a;
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+.rental-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 12px;
+  padding: 20px 0;
+  margin-top: 5px;
+  border-bottom: 1px solid #edf0eb;
+}
+
+.rental-detail-grid div span {
+  display: block;
+  color: #929c94;
+  font-size: 9px;
+  margin-bottom: 7px;
+}
+
+.rental-detail-grid div strong {
+  font-size: 12px;
+  color: #334638;
+}
+
+.panel-link,
+.text-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #387450;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.text-action {
+  background: transparent;
+  border: 0;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+.icon-button {
+  background: #f6f8f4;
+  color: #7c897e;
+  border: 0;
+  border-radius: 6px;
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+}
+
+.panel-heading-icon {
+  color: #688574;
+}
+
+/* INSPECTION */
+
+.inspection-progress {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  padding: 5px 0 22px;
+  border-bottom: 1px solid #edf0eb;
+}
+
+.progress-circle {
+  width: 105px;
+  height: 105px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: conic-gradient(#4d8d62 0deg 360deg, #e9eee8 360deg);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+.progress-circle > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.progress-circle strong {
+  font-size: 21px;
+  color: #285d3d;
+}
+
+.progress-circle span {
+  font-size: 8px;
+  color: #8c978e;
+}
+
+.inspection-progress > p {
+  font-size: 10px;
+  color: #7e8b80;
+  line-height: 1.8;
+  max-width: 180px;
+}
+
+.inspection-checks {
+  display: grid;
+  gap: 13px;
+  padding-top: 19px;
+}
+
+.inspection-checks div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  color: #56665a;
+}
+
+.inspection-checks svg {
+  width: 16px;
+  height: 16px;
+  color: #4c9164;
+}
+
+.inspection-checks span {
+  margin-left: auto;
+  color: #4a8a5f;
+  font-size: 9px;
+}
+
+/* LOWER PANELS */
+
+.dashboard-bottom-grid {
+  grid-template-columns: 1.15fr .85fr;
+}
+
+.request-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eff1ed;
+}
+
+.request-card:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.request-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.request-icon.orange {
+  color: #b47d46;
+  background: #fbf1e6;
+}
+
+.request-icon.blue {
+  color: #5785a5;
+  background: #edf3f7;
+}
+
+.request-icon.green {
+  color: #47855b;
+  background: #edf5ed;
+}
+
+.request-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.request-info strong {
+  display: block;
+  font-size: 10px;
+  color: #3c4c40;
+}
+
+.request-info span {
+  display: block;
+  color: #939d94;
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.activity-status {
+  font-size: 8px;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.activity-status.completed {
+  color: #40835a;
+  background: #edf5ed;
+}
+
+.activity-status.pending {
+  color: #a97438;
+  background: #fbf2e5;
+}
+
+.activity-status.progress {
+  color: #587f9e;
+  background: #edf3f7;
+}
+
+.deposit-amount {
+  font-size: 32px;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+  color: #244f37;
+  margin-top: 12px;
+}
+
+.deposit-caption {
+  color: #929c94;
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.deposit-divider,
+.summary-divider {
+  height: 1px;
+  background: #edf0eb;
+  margin: 20px 0;
+}
+
+.deposit-row,
+.summary-stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 9px;
+  color: #829087;
+}
+
+.deposit-row strong,
+.summary-stat strong {
+  color: #3b4b40;
+  font-size: 10px;
+}
+
+.green-text {
+  color: #40815a !important;
+}
+
+.deposit-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  padding: 9px;
+  border-radius: 6px;
+  background: #f0f5ee;
+  color: #4a7b58;
+  font-size: 9px;
+}
+
+/* RECENT ACTIVITY */
+
+.activity-panel {
+  margin-bottom: 25px;
+}
+
+.activity-list {
+  display: grid;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eff1ed;
+}
+
+.activity-item:last-child {
+  border-bottom: 0;
+}
+
+.activity-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #eef4ec;
+  color: #4a8059;
+  border-radius: 8px;
+}
+
+.activity-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-description strong {
+  display: block;
+  font-size: 10px;
+  color: #34473a;
+}
+
+.activity-description p {
+  color: #849087;
+  font-size: 9px;
+  margin-top: 4px;
+}
+
+.activity-description > span {
+  display: block;
+  color: #a0a8a1;
+  font-size: 8px;
+  margin-top: 5px;
+}
+
+.dashboard-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #9ba49c;
+  font-size: 9px;
+  padding: 7px 0;
+}
+
+.dashboard-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #52765c;
+  font-weight: 600;
+}
+
+/* LANDLORD */
+
+.landlord-property-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #eff1ed;
+}
+
+.landlord-property-row:first-of-type {
+  padding-top: 0;
+}
+
+.landlord-property-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.landlord-property-row > img {
+  width: 57px;
+  height: 51px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.landlord-property-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.landlord-property-info strong {
+  display: block;
+  font-size: 10px;
+  color: #35483a;
+}
+
+.landlord-property-info > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  color: #89948b;
+  margin-top: 5px;
+}
+
+.landlord-property-info small {
+  display: block;
+  color: #a0a9a1;
+  font-size: 8px;
+  margin-top: 4px;
+}
+
+.occupancy-number {
+  font-size: 33px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #285c3e;
+  margin-top: 20px;
+}
+
+.occupancy-number span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #8b978d;
+}
+
+.occupancy-bar {
+  height: 9px;
+  background: #edf0e9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 17px;
+}
+
+.occupancy-bar > div {
+  height: 100%;
+  width: 80%;
+  background: #4d8860;
+  border-radius: 10px;
+}
+
+.occupancy-legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  font-size: 9px;
+  color: #7e8c81;
+}
+
+.occupancy-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.occupancy-legend i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.occupied-dot {
+  background: #4d8860;
+}
+
+.vacant-dot {
+  background: #d6ddd3;
+}
+
+.settlement-highlight {
+  background: #faf3e8;
+  border-radius: 7px;
+  padding: 15px;
+  margin-bottom: 18px;
+}
+
+.settlement-highlight span {
+  display: block;
+  color: #967345;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.settlement-highlight strong {
+  display: block;
+  color: #936b38;
+  font-size: 30px;
+  margin-top: 6px;
+}
+
+.settlement-highlight p {
+  font-size: 15px;
+  color: #9a876e;
+  margin-top: 5px;
+}
+
+.settlement-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #dfe9df;
+  background: #f0f5ef;
+  color: #39724d;
+  border-radius: 6px;
+  font-size: 20 px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* MOBILE SIDEBAR */
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-content {
+    padding: 30px 23px;
+  }
+
+  .dashboard-header {
+    padding: 0 23px;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-header-actions {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    box-shadow: none;
+  }
+
+  .dashboard-sidebar.sidebar-open {
+    transform: translateX(0);
+    box-shadow: 10px 0 30px rgba(0,0,0,.1);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,35,23,.35);
+    border: 0;
+    z-index: 19;
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .dashboard-menu {
+    display: grid;
+    place-items: center;
+  }
+
+  .dashboard-header {
+    height: 65px;
+    padding: 0 15px;
+    gap: 12px;
+  }
+
+  .dashboard-breadcrumb {
+    flex: 1;
+  }
+
+  .dashboard-search,
+  .header-user > span {
+    display: none;
+  }
+
+  .dashboard-content {
+    padding: 26px 16px;
+  }
+
+  .welcome-row {
+    align-items: flex-start;
+  }
+
+  .welcome-row h1 {
+    font-size: 21px;
+  }
+
+  .welcome-row > button {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .dashboard-content-grid,
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-grid {
+    gap: 10px;
+  }
+
+  .metric-card {
+    padding: 15px;
+  }
+
+  .metric-value {
+    font-size: 21px;
+  }
+
+  .dashboard-panel {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .welcome-row {
+    flex-direction: column;
+  }
+
+  .welcome-row > button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metric-top {
+    align-items: flex-start;
+  }
+
+  .metric-top > span {
+    font-size: 9px;
+  }
+
+  .metric-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .metric-value {
+    font-size: 19px;
+  }
+
+  .activity-item {
+    flex-wrap: wrap;
+  }
+
+  .activity-status {
+    margin-left: 46px;
+  }
+
+  .landlord-property-row > .lease-active {
+    font-size: 8px;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* RENTSURE — MIDNIGHT PREMIUM THEME */
+
+:root {
+  --bg: #101714;
+  --surface: #18221e;
+  --surface-hover: #202d27;
+  --border: #2b3932;
+  --text: #e6ede9;
+  --muted: #9aaa9f;
+  --green: #70c9a1;
+  --green-dark: #174c38;
+}
+
+/* Main backgrounds */
+.auth-page,
+.dashboard-shell {
+  background: var(--bg) !important;
+  color: var(--text);
+}
+
+.auth-form-side,
+.dashboard-main {
+  background: var(--bg);
+}
+
+/* Sidebars and headers */
+.dashboard-sidebar,
+.dashboard-header {
+  background: #141d19 !important;
+  border-color: var(--border) !important;
+}
+
+.dashboard-brand,
+.dashboard-breadcrumb strong,
+.header-user,
+.welcome-row h1,
+.metric-value,
+.panel-heading h2,
+.profile-info strong,
+.rental-detail-grid div strong,
+.request-info strong,
+.activity-description strong,
+.landlord-property-info strong {
+  color: var(--text) !important;
+}
+
+/* Cards and panels */
+.metric-card,
+.dashboard-panel,
+.auth-input-wrap,
+.role-option {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  color: var(--text);
+}
+
+.metric-card:hover,
+.role-option:hover {
+  background: var(--surface-hover) !important;
+  border-color: #456b58 !important;
+}
+
+/* Form fields */
+.auth-form-wrap h2,
+.auth-form-wrap label,
+.role-option span {
+  color: var(--text) !important;
+}
+
+.auth-subtitle,
+.auth-switch,
+.auth-legal,
+.dashboard-eyebrow,
+.welcome-row p,
+.metric-top > span,
+.metric-bottom,
+.request-info span,
+.activity-description p,
+.activity-description > span {
+  color: var(--muted) !important;
+}
+
+.auth-input-wrap input,
+.dashboard-search input {
+  color: var(--text) !important;
+}
+
+.auth-input-wrap input::placeholder,
+.dashboard-search input::placeholder {
+  color: #718279;
+}
+
+.auth-input-wrap:focus-within {
+  border-color: var(--green) !important;
+  box-shadow: 0 0 0 3px rgba(112, 201, 161, .12);
+}
+
+/* Buttons */
+.auth-submit,
+.dashboard-primary-button {
+  background: var(--green) !important;
+  color: #102018 !important;
+  border: 0;
+}
+
+.auth-submit:hover,
+.dashboard-primary-button:hover {
+  background: #8addb5 !important;
+}
+
+.auth-back,
+.auth-switch a,
+.panel-link,
+.text-action,
+.dashboard-footer a {
+  color: var(--green) !important;
+}
+
+/* Navigation */
+.sidebar-link {
+  color: var(--muted) !important;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background: #20382c !important;
+  color: var(--green) !important;
+}
+
+/* Icons and badges */
+.dashboard-brand-icon,
+.metric-icon.green,
+.activity-icon,
+.profile-avatar {
+  background: #20382c !important;
+  color: var(--green) !important;
+}
+
+.lease-active,
+.deposit-note,
+.role-option.selected {
+  background: #20382c !important;
+  border-color: #365b46 !important;
+  color: var(--green) !important;
+}
+
+.metric-icon.purple,
+.metric-icon.orange,
+.metric-icon.blue,
+.request-icon.orange,
+.request-icon.blue,
+.request-icon.green {
+  background: #26312c !important;
+  color: #a8cdb8 !important;
+}
+
+/* Borders and separators */
+.sidebar-profile,
+.rental-detail-grid,
+.inspection-progress,
+.request-card,
+.activity-item,
+.deposit-divider,
+.summary-divider,
+.dashboard-footer {
+  border-color: var(--border) !important;
+}
+
+/* Dashboard controls */
+.dashboard-search,
+.notification-button,
+.icon-button {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  color: var(--muted) !important;
+}
+
+.progress-circle::before {
+  background: var(--surface) !important;
+}
+
+.progress-circle strong,
+.deposit-amount,
+.occupancy-number {
+  color: var(--green) !important;
+}
+
+.occupancy-bar {
+  background: #2b3932 !important;
+}
+
+.occupancy-bar > div {
+  background: var(--green) !important;
+}
+
+/* Story panel */
+.auth-story {
+  background: linear-gradient(145deg, #173e2d, #101d17) !important;
+}
+
+.auth-story .auth-eyebrow,
+.story-content h1 span,
+.story-points svg {
+  color: var(--green) !important;
+}
+
+.story-content > p,
+.story-points div,
+.story-bottom {
+  color: #c0d2c7 !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .dashboard-sidebar {
+    background: #141d19 !important;
+  }
+
+  .sidebar-overlay {
+    background: rgba(0, 0, 0, .65) !important;
+  }
+}
+
